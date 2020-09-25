@@ -31,6 +31,19 @@ body {
     background: #307cf9;
 }
 
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+.header img {
+    width: 30px;
+    height: 30px;
+    margin-right: 1rem;
+}
+
 .calculadora,
 .historico,
 .botao {
@@ -71,11 +84,11 @@ body {
 
 .historico {
     height: 20px;
-    font-size: .9rem;
+    font-size: 0.9rem;
     background-color: #fff;
     margin-bottom: 16px;
     border-color: #bbb;
-    padding: .5rem;
+    padding: 0.5rem;
     text-align: right;
     word-break: keep-all;
     white-space: nowrap;
@@ -104,7 +117,8 @@ body {
     margin-bottom: 16px;
     cursor: pointer;
     background-color: #f9f9f9;
-    transition: border-color 0.2s ease-in-out, background-color 0.2s, box-shadow 0.2s;
+    transition: border-color 0.2s ease-in-out, background-color 0.2s,
+        box-shadow 0.2s;
 }
 .botao:hover {
     background-color: #f1f1f1;
@@ -132,14 +146,17 @@ body {
     border-color: #1857bb;
 }
 
-
 @media (max-width: 500px) {
+    .header {
+        font-size: 14px;
+        white-space: nowrap;
+    }
     .calculadora {
         margin: 20px 10px;
     }
     .botao {
         width: 100%;
-        margin: .5rem;
+        margin: 0.5rem;
     }
     .botoes > div .botao:first-child {
         margin-left: 0;
@@ -153,7 +170,7 @@ body {
     .display {
         height: 45px;
         padding: 5px 15px 0 0;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
         font-size: 2rem;
     }
 }
