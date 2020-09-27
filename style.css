@@ -2,16 +2,17 @@
     padding: 0;
     margin: 0;
 }
+ 
+html,
+body {
+    overflow-x: hidden;
+}
 
 body {
     background: #f5f5f5;
     font-family: "Source Sans Pro", Arial, sans-serif;
     letter-spacing: 5px;
     font-size: 1.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -31,12 +32,23 @@ body {
     background: #307cf9;
 }
 
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+}
+
 .header {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
     margin-bottom: 16px;
+}
+.header h1 {
+    font-size: 16px;
+    font-weight: normal;
 }
 .header img {
     width: 30px;
@@ -146,11 +158,51 @@ body {
     border-color: #1857bb;
 }
 
+.forkme{
+    position: absolute; 
+    top: 42px;
+    right: -42px;
+    width: 200px;
+    padding: 1px 0;
+    background: #4d90fe;
+    color: #eee;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.forkme a{
+    display: block;
+    padding: 1px 0;
+    height: 24px;
+    line-height: 24px;
+    color: inherit;  
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    letter-spacing: 0;
+    border: 1px solid rgba(255,255,255,0.3);
+    -moz-text-shadow: 0 0 10px rgba(0,0,0,0.31);
+    -webkit-text-shadow: 0 0 10px rgba(0,0,0,0.31);
+    text-shadow: 0 0 10px rgba(0,0,0,0.31);
+}
+
 @media (max-width: 500px) {
-    .header {
-        font-size: 14px;
-        white-space: nowrap;
+
+    .header h1 {
+        line-height: 14px;
     }
+    .header span {
+        display: block;
+    }
+
     .calculadora {
         margin: 20px 10px;
     }
@@ -160,6 +212,17 @@ body {
     }
     .botoes > div .botao:first-child {
         margin-left: 0;
+    }
+
+    .forkme {
+        top: 25px;
+        right: -50px;
+        width: 175px;
+    }
+    .forkme a {
+        height: 20px;
+        line-height: 20px;
+        font-size: 10px;
     }
 }
 
